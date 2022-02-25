@@ -162,6 +162,164 @@
 			"response": []
 		},
 		{
+			"name": "get album images",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "tokenSecret",
+							"value": "{{accessTokenSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						},
+						{
+							"key": "consumerSecret",
+							"value": "{{consumerSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "{{consumerKey}}",
+							"type": "string"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://api.smugmug.com/api/v2/album/{{albumId}}!images",
+					"protocol": "https",
+					"host": [
+						"api",
+						"smugmug",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"album",
+						"{{albumId}}!images"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get image 1 info",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "tokenSecret",
+							"value": "{{accessTokenSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						},
+						{
+							"key": "consumerSecret",
+							"value": "{{consumerSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "{{consumerKey}}",
+							"type": "string"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://api.smugmug.com/api/v2/image/{{large-image-id}}!largestimage",
+					"protocol": "https",
+					"host": [
+						"api",
+						"smugmug",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"image",
+						"{{large-image-id}}!largestimage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "get image",
 			"request": {
 				"auth": {
@@ -218,7 +376,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://api.smugmug.com/api/v2/album/{{albumId}}/image/{{imageId}}",
+					"raw": "https://api.smugmug.com/api/v2/album/{{albumId}}/image/{{large-image-id}}",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -231,7 +389,7 @@
 						"album",
 						"{{albumId}}",
 						"image",
-						"{{imageId}}"
+						"{{large-image-id}}"
 					]
 				}
 			},
