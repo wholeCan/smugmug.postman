@@ -59,7 +59,13 @@
 					]
 				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "https://api.smugmug.com/api/v2!authuser",
 					"protocol": "https",
@@ -130,7 +136,13 @@
 					]
 				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "https://api.smugmug.com/api/v2/user/{{username}}!albums",
 					"protocol": "https",
@@ -155,6 +167,11 @@
 				"auth": {
 					"type": "oauth1",
 					"oauth1": [
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
 						{
 							"key": "tokenSecret",
 							"value": "{{accessTokenSecret}}",
@@ -186,11 +203,6 @@
 							"type": "string"
 						},
 						{
-							"key": "addParamsToHeader",
-							"value": false,
-							"type": "boolean"
-						},
-						{
 							"key": "addEmptyParamsToSign",
 							"value": false,
 							"type": "boolean"
@@ -198,7 +210,13 @@
 					]
 				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "https://api.smugmug.com/api/v2/album/{{albumId}}/image/{{imageId}}",
 					"protocol": "https",
